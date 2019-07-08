@@ -7,6 +7,7 @@ import { ProductDescComponent } from './product-desc/product-desc.component';
 import { ProductSellerComponent } from './product-seller/product-seller.component';
 import { ChatComponent } from './chat/chat.component';
 import { LoginGuard } from './guard/login.guard';
+import { UnsavedGuard } from './guard/unsaved.guard';
 
 const routes: Routes = [
   {path: '', redirectTo: 'home', pathMatch: 'full'},
@@ -15,13 +16,13 @@ const routes: Routes = [
   {path: 'product/:id', component: ProductComponent, children: [
     {path: '', component: ProductDescComponent},
     {path: 'seller/:id', component: ProductSellerComponent},
-  ], canActivate: [LoginGuard]},
+  ], canActivate: [LoginGuard], canDeactivate: [UnsavedGuard]},
   {path: '**', component: PageNotFindComponent},
 ];
 
 @NgModule({
   imports: [RouterModule.forRoot(routes)],
   exports: [RouterModule],
-  providers: [LoginGuard]
+  providers: [LoginGuard, UnsavedGuard]
 })
 export class AppRoutingModule { }
