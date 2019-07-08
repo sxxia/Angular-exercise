@@ -5,7 +5,8 @@ import { ProductComponent } from './product/product.component';
 import { PageNotFindComponent } from './page-not-find/page-not-find.component';
 
 const routes: Routes = [
-  {path: '', component: HomeComponent},
+  {path: '', redirectTo: 'home', pathMatch: 'full'},
+  {path: 'home', component: HomeComponent},
   {path: 'product/:id', component: ProductComponent},
   {path: '**', component: PageNotFindComponent},
 ];
