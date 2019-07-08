@@ -1,4 +1,5 @@
 <a [routerLink]="['/']">Home</a>
-<a [routerLink]="['/product']">Product</a>
+<!-- <a [routerLink]="['/product']" [queryParams]="{id: 1}">Product</a> -->
+<a [routerLink]="['/product', 1]">Product</a>
 <input type="button" value="Product" (click)="goToProduct()">
 <router-outlet></router-outlet>

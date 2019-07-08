@@ -10,6 +10,6 @@ export class AppComponent {
   constructor(private router: Router){ }
 
   goToProduct() {
-    this.router.navigate(['/product']);
+    this.router.navigate(['/product', 2]);
   }
 }
