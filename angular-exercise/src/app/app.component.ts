@@ -8,7 +8,12 @@ import { Router } from '@angular/router';
 })
 export class AppComponent {
   public stockName: string;
+  public stockCode: number;
   public purchasedAmount: number;
-  
+
   constructor(){ }
+
+  purchasedAmountHandle(event: any) {
+    this.purchasedAmount = event;
+  }
 }

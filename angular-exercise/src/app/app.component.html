@@ -1,6 +1,7 @@
 <div class="container">
     <p>I am the parent component: </p>
     <input type="text" placeholder="Please enter stock name" [(ngModel)]="stockName"><br>
-    <input type="text" placeholder="Please enter the amount of purchased stocks" [(ngModel)]="purchasedAmount" >
-    <app-child [stockNameChild]="stockName" [purchasedAmountChild]="purchasedAmount"></app-child>
+    <input type="text" placeholder="Please enter stock code" [(ngModel)]="stockCode"><br>
+    <p>Purchased amount of stocks: {{purchasedAmount}}</p>
+    <app-child [stockNameChild]="stockName" [stockCodeChild]="stockCode" (purchasedAmountChild)="purchasedAmountHandle($event)"></app-child>
 </div>
