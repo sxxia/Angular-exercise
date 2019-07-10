@@ -7,13 +7,10 @@ import { Component, OnInit } from '@angular/core';
 })
 export class BindComponent implements OnInit {
 
+  public imgUrl: string = "http://placehold.it/200x200";
+
   constructor() { }
 
   ngOnInit() {
   }
-
-  doOnClick(event: any) {
-    console.log(event);
-  }
-
 }
