@@ -8,9 +8,18 @@ import { Component, OnInit } from '@angular/core';
 export class BindComponent implements OnInit {
 
   public imgUrl: string = "http://placehold.it/200x200";
+  public name: string;
 
-  constructor() { }
+  constructor() { 
+    setInterval(() => {
+      this.name = 'Tom';
+    }, 3000);
+  }
 
   ngOnInit() {
+  }
+
+  showInput(event: any) {
+    this.name = event.target.value;
   }
 }
