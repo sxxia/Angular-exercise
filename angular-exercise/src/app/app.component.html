@@ -1,8 +1,6 @@
-<a [routerLink]="['/home']">Home</a>
-<!-- <a [routerLink]="['/product']" [queryParams]="{id: 1}">Product</a> -->
-<a [routerLink]="['/product', 1]">Product</a>
-<input type="button" value="Product" (click)="goToProduct()">
-<a [routerLink]="[{outlets: {aux: 'chat'}}]">Star chat</a>
-<a [routerLink]="[{outlets: {aux: null}}]">End chat</a>
-<router-outlet></router-outlet>
-<router-outlet name="aux"></router-outlet>
+<div class="container">
+    <p>I am the parent component: </p>
+    <input type="text" placeholder="Please enter stock name" [(ngModel)]="stockName"><br>
+    <input type="text" placeholder="Please enter the amount of purchased stocks" [(ngModel)]="purchasedAmount" >
+    <app-child [stockNameChild]="stockName" [purchasedAmountChild]="purchasedAmount"></app-child>
+</div>

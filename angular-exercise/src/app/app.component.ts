@@ -7,9 +7,8 @@ import { Router } from '@angular/router';
   styleUrls: ['./app.component.scss']
 })
 export class AppComponent {
-  constructor(private router: Router){ }
-
-  goToProduct() {
-    this.router.navigate(['/product', 2]);
-  }
+  public stockName: string;
+  public purchasedAmount: number;
+  
+  constructor(){ }
 }
