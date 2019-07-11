@@ -1,1 +1,10 @@
-<app-life-cycle [name]="title"></app-life-cycle>
+<div class="parent">
+  <h2>I am parent component</h2>
+  <p>
+    Greeting: <input type="text" [(ngModel)]="greeting">
+  </p>
+  <p>
+    Name: <input type="text" [(ngModel)]="user.name">
+  </p>
+  <app-child [greeting]="greeting" [user]="user"></app-child>
+</div>

@@ -7,7 +7,9 @@ import { Router } from '@angular/router';
   styleUrls: ['./app.component.scss']
 })
 export class AppComponent {
-  public title = 'Tom';
+  public greeting = 'Hello';
+
+  public user = {name: 'Tom'};
 
   constructor(){ }
 
