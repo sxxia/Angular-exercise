@@ -5,23 +5,11 @@ import { Component, ViewChild, OnInit, AfterContentInit, AfterContentChecked, Af
   templateUrl: './app.component.html',
   styleUrls: ['./app.component.scss']
 })
-export class AppComponent implements OnInit, AfterContentInit, AfterContentChecked, AfterViewInit {
+export class AppComponent implements OnInit {
 
   constructor(){ }
 
   ngOnInit(): void {
-  }
-
-  ngAfterContentInit(): void {
-    console.log('Project content initial completed in parent component');
-  }
-
-  ngAfterContentChecked(): void {
-    console.log('Project content checked completed in parent component');
-  }
-
-  ngAfterViewInit(): void {
-    console.log('View initial completed in parent component');
   }
 
 }
