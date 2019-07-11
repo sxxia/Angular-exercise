@@ -1,3 +1,7 @@
-<app-child-one #childOne></app-child-one>
-<app-child-two #childTwo></app-child-two>
-<button (click)="childTwo.childTwoMethod('call component child two method from parent component')">Click me</button>
+<div class="container">
+  <h2>I am parent component</h2>
+  <app-child>
+    <p class="header">This is the header from parent component</p>
+    <p class="footer">This is the footer from parent component</p>
+  </app-child>
+</div>
