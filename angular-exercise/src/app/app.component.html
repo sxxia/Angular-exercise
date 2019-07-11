@@ -1,10 +1,3 @@
-<div class="parent">
-  <h2>I am parent component</h2>
-  <p>
-    Greeting: <input type="text" [(ngModel)]="greeting">
-  </p>
-  <p>
-    Name: <input type="text" [(ngModel)]="user.name">
-  </p>
-  <app-child [greeting]="greeting" [user]="user"></app-child>
-</div>
+<app-child-one #childOne></app-child-one>
+<app-child-two #childTwo></app-child-two>
+<button (click)="childTwo.childTwoMethod('call component child two method from parent component')">Click me</button>

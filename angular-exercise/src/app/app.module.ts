@@ -4,14 +4,14 @@ import { NgModule } from '@angular/core';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { FormsModule } from '@angular/forms';
-import { LifeCycleComponent } from './life-cycle/life-cycle.component';
-import { ChildComponent } from './child/child.component';
+import { ChildOneComponent } from './child-one/child-one.component';
+import { ChildTwoComponent } from './child-two/child-two.component';
 
 @NgModule({
   declarations: [
     AppComponent,
-    LifeCycleComponent,
-    ChildComponent,
+    ChildOneComponent,
+    ChildTwoComponent,
   ],
   imports: [
     BrowserModule,
