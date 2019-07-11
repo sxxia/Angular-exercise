@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, Input } from '@angular/core';
 import { Router } from '@angular/router';
 
 @Component({
@@ -7,13 +7,11 @@ import { Router } from '@angular/router';
   styleUrls: ['./app.component.scss']
 })
 export class AppComponent {
-  public stockName: string;
-  public stockCode: number;
-  public purchasedAmount: number;
+  public message: string
 
   constructor(){ }
 
-  purchasedAmountHandle(event: any) {
-    this.purchasedAmount = event;
+  messageHandler(event: any) {
+    this.message = event;
   }
 }

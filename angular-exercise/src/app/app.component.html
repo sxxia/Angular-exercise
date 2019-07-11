@@ -1,7 +1,9 @@
+<h1>This is a demo for two children angular component communication</h1>
 <div class="container">
-    <p>I am the parent component: </p>
-    <input type="text" placeholder="Please enter stock name" [(ngModel)]="stockName"><br>
-    <input type="text" placeholder="Please enter stock code" [(ngModel)]="stockCode"><br>
-    <p>Purchased amount of stocks: {{purchasedAmount}}</p>
-    <app-child [stockNameChild]="stockName" [stockCodeChild]="stockCode" (purchasedAmountChild)="purchasedAmountHandle($event)"></app-child>
+  <div class="child-one">
+    <app-child-one [messageFromChildTwo]="message"></app-child-one> 
+  </div>
+  <div class="child-two">
+    <app-child-two (messageEmitter)="messageHandler($event)"></app-child-two>
+  </div>
 </div>
