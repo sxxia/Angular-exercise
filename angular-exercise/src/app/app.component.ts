@@ -7,11 +7,7 @@ import { Router } from '@angular/router';
   styleUrls: ['./app.component.scss']
 })
 export class AppComponent {
-  public message: string
 
   constructor(){ }
 
-  messageHandler(event: any) {
-    this.message = event;
-  }
 }
