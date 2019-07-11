@@ -1,15 +1,27 @@
-import { Component } from '@angular/core';
-import { Router } from '@angular/router';
+import { Component, ViewChild, OnInit, AfterContentInit, AfterContentChecked, AfterViewInit } from '@angular/core';
 
 @Component({
   selector: 'app-root',
   templateUrl: './app.component.html',
   styleUrls: ['./app.component.scss']
 })
-export class AppComponent {
-  constructor(private router: Router){ }
+export class AppComponent implements OnInit, AfterContentInit, AfterContentChecked, AfterViewInit {
 
-  goToProduct() {
-    this.router.navigate(['/product', 2]);
+  constructor(){ }
+
+  ngOnInit(): void {
   }
+
+  ngAfterContentInit(): void {
+    console.log('Project content initial completed in parent component');
+  }
+
+  ngAfterContentChecked(): void {
+    console.log('Project content checked completed in parent component');
+  }
+
+  ngAfterViewInit(): void {
+    console.log('View initial completed in parent component');
+  }
+
 }
