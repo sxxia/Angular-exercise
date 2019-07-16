@@ -1,9 +1,28 @@
 <form [formGroup]="formModel" (submit)="onSubmit()">
   <div>Username: <input type="text" formControlName="username"></div>
+  <div [hidden]="formModel.get('username').valid || formModel.get('username').untouched">
+    <div [hidden]="!formModel.hasError('required', 'username')">
+      Please enter username
+    </div>
+    <div [hidden]="!formModel.hasError('minlength', 'username')">
+      The minimum length of username is 6 characters
+    </div>
+  </div>
   <div>Phone Number: <input type="number" formControlName="mobile"></div>
+  <div [hidden]="formModel.get('mobile').valid || formModel.get('mobile').pristine">
+    <div [hidden]="!formModel.hasError('mobile', 'mobile')">
+      Please enter correct phone number
+    </div>
+  </div>
   <div formGroupName="passwordsGroup">
     <div>Password: <input type="password" formControlName="password"></div>
+    <div [hidden]="!formModel.hasError('minlength', ['passwordsGroup', 'password'])">
+        The minimum length of password is 6 characters
+    </div>
     <div>Confirm Password： <input type="password" formControlName="pconfirm"></div>
+  </div>
+  <div [hidden]="!formModel.hasError('equal', 'passwordsGroup')">
+    Password doesn't match
   </div>
   <button type="submit">Submit</button>
 </form>
